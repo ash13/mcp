@@ -12,6 +12,9 @@ RUN apt-get update && \
 # Add conda to path
 ENV PATH /opt/conda/bin:$PATH
 
+# Set working directory
+WORKDIR /app
+
 # Copy environment.yml
 COPY venv/environment.yml /app/environment.yml
 
